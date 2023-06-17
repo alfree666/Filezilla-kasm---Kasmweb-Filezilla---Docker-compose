@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+
+    filezilla:
+        image: kasmweb/filezilla:1.13.1
+        container_name: filezilla
+        ports:
+            - "4901:4901"
+            - "5901:5901"
+            - "6901:6901"
+        environment:
+            - VNC_PW=password
+        shm_size: '512m'  
+        restar: unless-stopped 
