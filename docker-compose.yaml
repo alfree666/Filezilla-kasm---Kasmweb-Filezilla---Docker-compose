@@ -12,4 +12,6 @@ services:
         environment:
             - VNC_PW=password
         shm_size: '512m'  
-        restar: unless-stopped 
+        restart: unless-stopped 
+
+        
